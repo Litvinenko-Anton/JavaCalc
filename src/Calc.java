@@ -40,6 +40,21 @@ public class Calc {
         System.out.print(message);
     }
 
+    public void print(String message, long value) {
+        System.out.print(message);
+        System.out.print(value);
+    }
+
+    public void print(String message, double value) {
+        print(message, value, 2);
+    }
+
+    public void print(String message, double value, int round) {
+        System.out.print(message);
+        String format = "%." + round +"f"; // result "%.2f"
+        System.out.printf(format, value);
+    }
+
     /**
      * Calculate int
      */
@@ -97,7 +112,7 @@ public class Calc {
             return mult(x, y);
         } else if (operator.equals("/")) {
             return div(x, y);
-        } else  {
+        } else {
             throw new RuntimeException("Unknown operator '" + operator + "'");
         }
     }

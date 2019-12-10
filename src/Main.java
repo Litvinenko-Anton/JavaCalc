@@ -10,7 +10,7 @@ public class Main {
         float num2 = calc.inputFloat();
 
         float result = calc.calculate(num1, num2, operation);
-        calc.print("Result : " + result);
+        calc.print("Result : ", result);
 
     }
 
